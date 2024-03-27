@@ -26,4 +26,6 @@ loop:
 
 times 510-($-$$) db 0
 
-dw 0xaa55 ; nasm boot.asm -f bin -o boot.bin // the bytes are 170 and 85
+dw 0xaa55
+ ; nasm boot.asm -f bin -o boot.bin      to compile
+ ; qemu-system-x86_64 boot.bin           to run
