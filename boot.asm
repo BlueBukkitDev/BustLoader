@@ -1,3 +1,4 @@
+[org 0x7c00] ; This tells us that the code is expected to be loaded to address 0x7c00, which is the address at which BIOS loads the bootloader. This prevents having to calculate addresses so much. 
 loop:
     mov ah, 0x0e ; int 10/ ah = 0eh -> scrolling teletype BIOS routine
     mov al, 'D'
@@ -23,6 +24,9 @@ loop:
     mov al, ' '
     int 0x10
     jmp loop
+
+welcome_message:
+    db 'Deez Nutz! ',0
 
 times 510-($-$$) db 0
 
