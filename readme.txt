@@ -29,3 +29,8 @@ Because it is storing the address on the stack, jumping from a function into a d
 %include is a keyword in NASM that allows you to include entire assembly files inside of this one; because of this, you can make small assembly bits that do particular things, then include them into your existing project to make it more human-readable and reduce your workload. Example:
 %include "useful_function.asm" ; this will be replaced by the code inside the quoted assembly file. 
 
+General-Purpose registers allow you to manipulate and compare data quickly and easily. They are named and used as follows:
+AX (Accumulator): Often used for arithmetic operations, I/O operations, and interrupt calls.
+BX (Base Register): Commonly used as a pointer to data (base pointer for data segment).
+CX (Count Register): Often used as a loop counter due to its role in loop and string instructions.
+DX (Data Register): Frequently used for I/O operations, especially when dealing with word-sized data, and sometimes used in conjunction with AX for operations requiring more than 16 bits.
