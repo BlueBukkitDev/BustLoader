@@ -21,7 +21,7 @@ end_of_string:
     ret ; jump back to original function call
 
 welcome_message:
-    db 'Busting Loads...', 0
+    db 'Welcome to the Beginning', 0
 
 times 510-($-$$) db 0
 
